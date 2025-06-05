@@ -17,11 +17,11 @@ public class restauranteServicio {
         return restauranteRepositorio.findAll();
     }
 
-    public List<Restaurante> buscarPlatoPorNombre(String buscarPlato) {
+    public List<Restaurante> buscarPlatoPorCategoria(String buscarPlato) {
         if (buscarPlato == null || buscarPlato.isEmpty()) {
             return restauranteRepositorio.findAll();
         } else {
-            return restauranteRepositorio.findByNombreContainingIgnoreCase(buscarPlato);
+            return restauranteRepositorio.findByCategoriaContainingIgnoreCase(buscarPlato);
         }
     }
 
